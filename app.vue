@@ -55,7 +55,7 @@ onMounted(() => {
 
 <template>
   <div class="w-100vw h-100vh flex items-center justify-center">
-    <h1 ref="mainRef" class="text-64px">Coming soon</h1>
+    <h1 ref="mainRef" class="text-8vw">Coming soon</h1>
   </div>
 </template>
 
