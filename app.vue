@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const title = "Atelier GO RUSTIC";
+const title = "ATELIER GO RUSTIC";
 const description =
   'Explore handcrafted home goods at Atelier GO RUSTIC, blending the serene aesthetics of "wabi-sabi" with natural materials and minimal human intervention. Discover our collection of artisanal pieces, meticulously crafted to harmonize with your living space and evoke tranquility.';
 const keyword = [
