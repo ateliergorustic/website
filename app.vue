@@ -1,24 +1,56 @@
 <script lang="ts" setup>
-useSeoMeta({
-  title: 'My Amazing Site',
-  ogTitle: 'My Amazing Site',
-  description: 'This is my amazing site, let me tell you all about it.',
-  ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogImage: 'https://example.com/image.png',
-  twitterCard: 'summary_large_image',
-})
+const title = "Atelier GO RUSTIC";
+const description =
+  'Explore handcrafted home goods at Atelier GO RUSTIC, blending the serene aesthetics of "wabi-sabi" with natural materials and minimal human intervention. Discover our collection of artisanal pieces, meticulously crafted to harmonize with your living space and evoke tranquility.';
+const keyword = [
+  "Wabisabi style",
+  "Quercus acutissima",
+  "Weathered wood",
+  "Table tray",
+  "Imperfectus style",
+  "Pottery",
+  "Copper tea set",
+  "Handcrafted",
+  "Rustic style",
+  "Natural materials",
+  "Creative workshop",
+  "Handmade decor",
+  "Exquisite craftsmanship",
+  "Wood design",
+  "Natural aesthetics",
+  "Hand carving",
+  "Simple living",
+  "Handcrafted production",
+  "Primitive style",
+];
 
-const mainRef = ref<HTMLElement>()
+useSeoMeta({
+  title: title,
+  ogTitle: title,
+  description: description,
+  ogDescription: description,
+  twitterCard: "summary_large_image",
+  keywords: keyword.join(","),
+});
+
+const mainRef = ref<HTMLElement>();
 
 onMounted(() => {
-  if(mainRef.value) {
-    const text = mainRef.value.innerText.split('')
+  if (mainRef.value) {
+    const text = mainRef.value.innerText.split("");
 
-    const rewrite = text.map((ele, index) => `<span class="text-animate" style="${ele !== ' ' && 'display: inline-block;'} animation-delay: ${0.1 * index}s">${ele}</span>`).join('')
+    const rewrite = text
+      .map(
+        (ele, index) =>
+          `<span class="text-animate" style="${
+            ele !== " " && "display: inline-block;"
+          } animation-delay: ${0.1 * index}s">${ele}</span>`
+      )
+      .join("");
 
-    mainRef.value.innerHTML = rewrite
+    mainRef.value.innerHTML = rewrite;
   }
-})
+});
 </script>
 
 <template>
